@@ -58,27 +58,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, 7000);
 
-    /* Contact Form Submission */
-    const contactForm = document.getElementById('contactForm');
-
-    contactForm.addEventListener('submit', function(e) {
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
         e.preventDefault();
-
-        // Simple form validation (can be expanded)
-        const name = contactForm.name.value.trim();
-        const email = contactForm.email.value.trim();
-        const message = contactForm.message.value.trim();
-
-        if (name === '' || email === '' || message === '') {
-            alert('Please fill in all fields.');
+    
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+    
+        // Validation
+        if (name === '') {
+            alert('Please enter your name.');
             return;
         }
-
-        // Here you can add AJAX to send form data to a server
-        // For now, we'll just display a success message
-        alert('Thank you for your message! I will get back to you soon.');
-
-        // Reset the form
-        contactForm.reset();
+    
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+    
+        if (message === '') {
+            alert('Please enter a message.');
+            return;
+        }
+    
+        alert('Your message has been sent successfully!');
+        this.reset(); // Reset the form after successful validation
     });
+    
+    // Email validation helper function
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+
+    
+// Carousel Functionality
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel-btn.next');
+const prevButton = document.querySelector('.carousel-btn.prev');
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+// Arrange slides next to one another
+slides.forEach((slide, index) => {
+  slide.style.left = `${slideWidth * index}px`;
+});
+
+// Move to target slide
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = `translateX(-${targetSlide.style.left})`;
+  currentSlide.classList.remove('current-slide');
+  targetSlide.classList.add('current-slide');
+};
+
+// Move to the next slide
+nextButton.addEventListener('click', () => {
+  const currentSlide = track.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+
+  if (nextSlide) {
+    moveToSlide(track, currentSlide, nextSlide);
+  }
+});
+
+// Move to the previous slide
+prevButton.addEventListener('click', () => {
+  const currentSlide = track.querySelector('.current-slide');
+  const prevSlide = currentSlide.previousElementSibling;
+
+  if (prevSlide) {
+    moveToSlide(track, currentSlide, prevSlide);
+  }
+});
+
 });

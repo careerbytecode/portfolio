@@ -224,6 +224,7 @@ a {
 }
 
 /* Why Work With Me Section */
+
 .why-work-with-me {
     background-color: #f9f9f9;
     padding: 80px 20px;
@@ -274,7 +275,6 @@ a {
     line-height: 1.6;
 }
 
-/* Hover Effects for Columns */
 .column:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
@@ -282,6 +282,7 @@ a {
 
 
 /* Skills Section */
+
 .skills {
     padding: 80px 20px;
     background-color: #fff;
@@ -327,7 +328,6 @@ a {
     font-weight: bold;
 }
 
-/* Font Awesome Icons */
 .fab, .fas {
     font-size: 3rem;
     color: #0e475a;
@@ -338,243 +338,3 @@ a {
     color: #fff;
 }
 
-
-
-/* Projects Section */
-.projects {
-    padding: 80px 20px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.projects h2 {
-    font-size: 2.5em;
-    color: #0e475a;
-    margin-bottom: 50px;
-}
-
-.project-carousel {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    overflow: hidden;
-}
-
-.project-card {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.project-card h3 {
-    font-size: 1.6em;
-    color: #333;
-    margin: 15px 0;
-}
-
-.project-card p {
-    font-size: 1em;
-    color: #666;
-    padding: 0 15px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0e475a;
-    color: #fff;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #61cde5;
-    color: #0e475a;
-    font-weight: bold;
-}
-
-.project-card:hover {
-    transform: scale(0.9);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-/* Let's Connect Section */
-.connect {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    flex-direction: column;
-    align-items: center;
-}
-
-.connect h2 {
-    font-size: 2.5em;
-    color: #0e475a;
-    margin-bottom: 20px;
-}
-
-.connect p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    font-size: 1.2em;
-    color: #333;
-    transition: color 0.3s ease;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.contact-item i {
-    font-size: 1.5em;
-    margin-right: 10px;
-    color: #0e475a;
-}
-
-.contact-item a {
-    text-decoration: none;
-    color: #0e475a;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: #1a6378;
-}
-
-.contact-item:hover {
-    color: #1a6378;
-}
-
-
-/* Footer */
-footer {
-    background-color: #0e475a;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        right: 0;
-        top: 60px;
-        background-color: rgba(255, 255, 255, 0.95);
-        height: 100vh;
-        width: 200px;
-        flex-direction: column;
-        align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    }
-
-    .nav-links.open {
-        transform: translateX(0);
-    }
-
-    .nav-links li {
-        margin: 20px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-left {
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .about-right h2 {
-        font-size: 2em;
-    }
-
-    .skills-list li {
-        font-size: 1em;
-    }
-
-    .project-carousel {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%;
-        margin-bottom: 30px;
-    }
-
-    .projects h2 {
-        font-size: 2em;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-    .columns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .column {
-        width: 80%;
-        margin-bottom: 30px;
-    }
-    .contact {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-content {
-        padding: 20px;
-    }
-
-    .profile-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-right h2 {
-        font-size: 1.8em;
-    }
-
-    .skills-list li {
-        font-size: 0.9em;
-    }
-    .section-title {
-        font-size: 2em;
-    }
-
-    .column {
-        width: 100%;
-    }
-}

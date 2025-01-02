@@ -7,7 +7,6 @@ This project is a personal portfolio website designed to showcase your work, ski
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
 
@@ -22,12 +21,6 @@ This project is a personal portfolio website designed to showcase your work, ski
 
 ---
 
-## Demo
-
-Check out the live demo of the project: [Live Demo](#) (Replace with your hosted link)
-
----
-
 ## Technologies Used
 
 - **HTML5**: For the website structure.
@@ -39,10 +32,20 @@ Check out the live demo of the project: [Live Demo](#) (Replace with your hosted
 ## File Structure
 
 /portfolio
+
 ├── index.html         # Main HTML file
-├── style.css          # Styling file
+
+├── styles.css          # Styling file
+
+├── styles1.css          # one more for css Styling file
+
 ├── script.js          # JavaScript file
+
 ├── /media            # Folder for images
+
+├── README.md           # File for READNME
+
+
 
 ---
 
