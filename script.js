@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     /* Navbar Toggle for Mobile */
     const hamburger = document.querySelector('.hamburger');
@@ -25,38 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     }
-
-    /* Project Carousel Auto Scroll */
-    const projectCarousel = document.querySelector('.project-carousel');
-    let projectScrollAmount = 0;
-
-    setInterval(() => {
-        if (projectScrollAmount >= projectCarousel.scrollWidth - projectCarousel.clientWidth) {
-            projectScrollAmount = 0;
-        } else {
-            projectScrollAmount += 300;
-        }
-        projectCarousel.scrollTo({
-            left: projectScrollAmount,
-            behavior: 'smooth'
-        });
-    }, 5000);
-
-    /* Testimonial Carousel Auto Scroll */
-    const testimonialCarousel = document.querySelector('.testimonial-carousel');
-    let testimonialScrollAmount = 0;
-
-    setInterval(() => {
-        if (testimonialScrollAmount >= testimonialCarousel.scrollWidth - testimonialCarousel.clientWidth) {
-            testimonialScrollAmount = 0;
-        } else {
-            testimonialScrollAmount += 300;
-        }
-        testimonialCarousel.scrollTo({
-            left: testimonialScrollAmount,
-            behavior: 'smooth'
-        });
-    }, 7000);
 
     document.getElementById('contactForm').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -92,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return regex.test(email);
     }
 
-
+});
     
 // Carousel Functionality
 const track = document.querySelector('.carousel-track');
@@ -132,6 +98,4 @@ prevButton.addEventListener('click', () => {
   if (prevSlide) {
     moveToSlide(track, currentSlide, prevSlide);
   }
-});
-
 });
